@@ -1,0 +1,51 @@
+## lsof
+# 查看任何文件信息 (Unix/Linux 一切皆文件)
+# See this primer: http://www.danielmiessler.com/study/lsof/
+# for a number of other useful lsof tips
+
+# 你甚至可以使用它来找到被删除的文件！（前提是有某个进程正在使用这个文件）
+#
+# > 当 UNIX 计算机受到入侵时，常见的情况是日志文件被删除，以掩盖攻击者的踪迹。管理错误也可能导致意外删除重要的文件，比如在清理旧日志时，意外地删除了数据库的活动事务日志。有时可以恢复这些文件，并且 lsof 可以为您提供帮助。
+# 当进程打开了某个文件时，只要该进程保持打开该文件，即使将其删除，它依然存在于磁盘中。这意味着，进程并不知道文件已经被删除，它仍然可以向打开该文件时提供给它的文件描述符进行读取和写入。除了该进程之外，这个文件是不可见的，因为已经删除了其相应的目录条目。
+# > Linux 的优点在于，它保存了文件的名称，甚至可以告诉我们它已经被删除。在遭到破坏的系统中查找相关内容时，这是非常有用的内容，因为攻击者通常会删除日志以隐藏他们的踪迹。
+#
+# lsof 大部分信息都来自于 /proc/ 目录，然而 /proc/ 目录并非 unix/linux 标准，像 Mac OSX、FreeBSD 等系统，都没有 /proc/。
+
+
+# List all IPv4 network files
+sudo lsof -i4
+
+# List all IPv6 network files
+sudo lsof -i6
+
+# List all listening ports
+lsof -Pnl +M -i4
+
+# List all files open mounted at /mount/point.
+# Particularly useful for finding which process(es) are using a
+# mounted USB stick or CD/DVD.
+lsof +f -- </mount/point>
+
+# 查看本地端口占用
+lsof -i :<port>
+
+# List all open sockets
+lsof -i
+
+# 查看本地 TCP 端口占用
+lsof -i TCP:<port>
+
+# List all connections to a specific host
+lsof -i@192.168.1.5
+
+# 查看某个用户打开的所有文件信息
+lsof -u <username>
+
+# 查看某个命令所关联的所有文件信息
+lsof -c <command>
+
+# 查看某个进程的所有信息
+lsof -p <pid>
+
+# List all processes accessing a particular file/directory
+lsof </path/to/file>
