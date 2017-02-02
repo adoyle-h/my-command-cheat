@@ -1,0 +1,19 @@
+## less
+
+# http://liyangliang.me/posts/2013/11/less-with-syntax-highlight-and-line-number/
+# less input preprocessor
+export LESSOPEN="| /usr/share/source-highlight/src-hilite-lesspipe.sh %s"
+# Like -r, but only ANSI “color” escape sequences are output in "raw" form
+export LESS=" -R "
+# To enable line number
+export LESS=" -N "
+
+# To disable the terminal refresh when exiting
+less -X
+
+# To save the contents to a file
+# Method 1 - Only works when the input is a pipe
+s <filename>
+
+# Method 2 - This should work whether input is a pipe or an ordinary file.
+Type g or < (g or less-than) | $ (pipe then dollar) then cat > <filename> and Enter.
