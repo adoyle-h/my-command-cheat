@@ -1,0 +1,34 @@
+## shell
+# diff 多个文件
+vimdiff file1 file2 [file3 [file4]]
+
+vim -d file1 file2 [file3 [file4]]
+
+nvim -d file1 file2 [file3 [file4]]
+
+## git
+# 启动默认 diff 工具来处理冲突
+git mergetool
+
+## vim
+# diff current file in vim
+:diffthis
+
+:diffpatch {patchfile}
+
+# 上一个不同
+[ c
+
+# 下一个不同
+] c
+
+# 在修改一个或两个文件之后，vimdiff 会试图重新比较文件，以便实时地反映比较结果。
+# 但有时会处理失败，就需要手工来刷新
+:diffupdate
+
+# 将目前文件退出 diff 模式
+:diffoff
+
+# 将目前窗口中的所有文件退出 diff 模式
+:diffoff!
+

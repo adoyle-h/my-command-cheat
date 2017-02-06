@@ -1,0 +1,104 @@
+# https://github.com/ginatrapani/todo.txt-cli
+# Usage:  todo.sh [-fhpqvV] [-d todo_config] action [task_number] [task_description]
+# alias: t
+
+# 显示帮助
+t -h
+
+# 新增一条待办事项。双引号可选
+t add "睡觉啦"
+
+# 新增一条待办事项: 以大写字母 (A) ~ (Z) 表示优先级
+t add "(A) 起床啦"
+t a "(B) 刷牙"
+
+# 新增一条待办事项: 多行内容
+t addm "FIRST THING I NEED TO DO +project1 @context
+SECOND THING I NEED TO DO +project2 @context"
+
+# 新增一条具有 project (+) 与 context (@) 标签的待办事项
+t add "吃早饭啦 +日常 @牛奶 @鸡蛋"
+
+# 在末尾增加内容
+t append NUMBER "TEXT TO APPEND"
+t app NUMBER "TEXT TO APPEND"
+
+# 在开头补充内容
+t prepend NUMBER "TEXT TO PREPEND"
+t prep NUMBER "TEXT TO PREPEND"
+
+# Marks item on line NUMBER as done in todo.txt.
+## 完成数个事项
+t do NUMBER, [NUMBER2, ...]
+
+# Don't auto-archive tasks automatically on completion
+t do -a NUMBER
+
+# Displays all todo's that contain TERM(s) sorted by priority with line numbers.
+# If no TERM specified, lists entire todo.txt.
+t list [TERM...]
+t ls [TERM...]
+
+# Plain mode turns off colors
+t ls -p [TERM...]
+
+# 删除待办事项
+t del NUMBER [TERM]
+t rm NUMBER [TERM]
+
+# 移除重复的事项
+t deduplicate
+
+# 降权
+t depri NUMBER
+t dp NUMBER
+
+# Adds PRIORITY to todo on line NUMBER.  If the item is already prioritized,
+# replaces current priority with new PRIORITY.
+# PRIORITY must be an uppercase letter between A and Z.
+t pri NUMBER PRIORITY
+t p NUMBER PRIORITY
+
+# Moves done items from todo.txt to done.txt and removes blank lines.
+t archive
+
+# 替换代办事项内容
+t replace NUMBER "UPDATED TODO"
+
+# 把打开的任务和做好的任务加到 report.txt
+t report
+
+# Displays all the lines in todo.txt AND done.txt that contain TERM(s)
+# sorted by priority with line  numbers.  If no TERM specified, lists
+# entire todo.txt AND done.txt concatenated and sorted.
+# 列出所有待办事项清单 (包含已完成的)
+t listall [TERM...]
+t lsa [TERM...]
+
+# Displays all the lines in SRC file located in the todo.txt directory,
+# sorted by priority with line  numbers.  If TERM specified, lists
+# all lines that contain TERM in SRC file.
+t listfile SRC [TERM...]
+t lf SRC [TERM...]
+
+# 只列出有 权重 标记的事项，如果没有指定 [PRIORITY] 则列出所有权重标记的事项
+t listpri [PRIORITY]
+t lsp [PRIORITY]
+
+# 只列出有 + 标记 (project) 的事项
+t listproj
+t lsprj
+
+# 只列出有 @ 标记 (context) 的事项
+t listcon
+t lsc
+
+# Adds a line of text to any file located in the todo.txt directory.
+# For example, addto inbox.txt "decide about vacation"
+t addto DEST "TEXT TO ADD"
+
+# Moves a line from source text file (SRC) to destination text file (DEST).
+# Both source and destination file must be located in the directory defined
+# in the configuration directory.  When SRC is not defined it's by default todo.txt.
+t move NUMBER DEST [SRC]
+t mv NUMBER DEST [SRC]
