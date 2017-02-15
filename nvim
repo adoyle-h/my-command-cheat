@@ -1,0 +1,2 @@
+# 保持当前环境变量和 HOME 目录。保证 nvim 能找到配置
+sudo -HE nvim <file>
