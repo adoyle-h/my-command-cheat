@@ -1,0 +1,8 @@
+# Edit cheatsheet
+cheat -e <command>
+
+# List cheatsheets
+cheat -l
+
+# Show help
+cheat -h
