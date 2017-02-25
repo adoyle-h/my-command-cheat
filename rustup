@@ -1,0 +1,11 @@
+# 更新所有安装的工具链
+rustup update
+
+# 更新某个版本
+rustup update <version>
+
+# 设置系统默认版本
+rustup default <version>
+
+# 设置某项目使用的 Rust 版本(随时可以切换)
+rustup override <version>
