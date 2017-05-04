@@ -1,0 +1,19 @@
+## mtr
+实时路由跟踪 + ping 工具
+
+# 默认是 live 模式
+mtr <域名或 IP>
+
+# 使用 report 模式
+mtr -r <域名或 IP>
+
+## 格式
+# HOST: vm-199 Loss% Snt Last Avg Best Wrst StDev
+# 第一列：显示的是IP地址和本机域名，这点和tracert很像。
+# 第二列 Loss%：是显示的每个对应IP的丢包率。
+# 第三列 snt：snt等于10，设置每秒发送数据包的数量，默认值是10 可以通过参数 -c来指定。
+# 第四列 Last：显示的最近一次的返回时延。
+# 第五列 Avg：平均值，这个应该是发送ping包的平均时延。
+# 第六列 Best：最好或者说时延最短的时间。
+# 第七列 Wrst：最坏或者说时延最长的时间。
+# 第八列 StDev：标准偏差。
