@@ -1,8 +1,20 @@
+# Loopup cheatsheet
+cheat <cheatsheet>
+
 # Edit cheatsheet
-cheat -e <command>
+cheat -e <cheatsheet>
 
 # List cheatsheets
 cheat -l
 
 # Show help
 cheat -h
+
+# Search cheatsheets for <keyword>
+cheat -s <keyword>
+
+# List directories on CHEATPATH
+cheat -d
+
+# Print the version number
+cheat -v
