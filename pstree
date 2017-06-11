@@ -1,0 +1,8 @@
+# Show branches of processes containing ``httpd'' using VT100 graphic chars:
+pstree -g 2 -s httpd
+
+# Show process number ``15495'' and its descendants:
+pstree 15495
+
+# Show process number ``15495'' and its parents and descendants:
+pstree -p 15495

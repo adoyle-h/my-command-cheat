@@ -7,6 +7,9 @@ cheat -e <cheatsheet>
 # List cheatsheets
 cheat -l
 
+# List your own cheatsheets
+cheat -l | grep ~
+
 # Show help
 cheat -h
 
