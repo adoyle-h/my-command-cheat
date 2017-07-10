@@ -1,0 +1,7 @@
+# The getconf utility prints the value of a POSIX or X/Open path or system configuration variable to the standard output
+
+# 查看系统命令长度上限
+getconf ARG_MAX
+
+# 查看系统位长是32位/64位
+getconf LONG_BIT
