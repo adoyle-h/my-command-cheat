@@ -1,0 +1,40 @@
+# Download a single file
+curl http://path.to.the/file
+
+# -o 指定保存文件名字
+curl http://example.com/file.zip -o new_file.zip
+
+# -O 用默认的名字保存
+
+curl -O http://example.com/file.zip
+
+# -L 跟踪重定向
+
+curl -L http://example.com/file.zip
+
+# 下载多个文件
+curl -O URLOfFirstFile -O URLOfSecondFile
+
+# -C - 断点续传
+curl -C - -O http://example.com/file.zip
+
+# 只获取 HTTP Headers
+curl -I http://example.com
+
+# Download all sequentially numbered files (1-24)
+curl http://example.com/pic[1-24].jpg
+
+# Download a file and pass HTTP Authentication
+curl -u username:password URL
+
+# Download a file with a Proxy
+curl -x proxysever.server.com:PORT http://addressiwantto.access
+
+# Download a file from FTP
+curl -u username:password -O ftp://example.com/pub/file.zip
+
+# Get an FTP directory listing
+curl ftp://username:password@example.com
+
+# Limit the rate of a download
+curl --limit-rate 1000B -O http://path.to.the/file
