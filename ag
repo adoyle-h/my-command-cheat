@@ -1,0 +1,16 @@
+# ag [options] pattern [path ...]
+#
+# 注意! ag 会忽略隐藏文件，以及 `.gitignore`, `.hgignore`, `.ignore` 中匹配的文件
+
+# 只列出匹配的文件名
+
+ag -l
+
+# 忽略文件
+ag --ignore PATTERN
+
+# 搜索所有文件，包括隐藏文件
+ag -u
+
+# 搜索包括 ignore 掉的文件，但仍忽略隐藏文件
+ag -U
