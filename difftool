@@ -1,0 +1,17 @@
+# http://amjith.blogspot.ca/2008/08/quick-and-dirty-vimdiff-tutorial.html
+
+do - Get changes from REMOTE window into the LOCAL window.
+
+dp - Put the changes from LOCAL window into the REMOTE window.
+
+]c - Jump to the next change.
+
+[c - Jump to the previous change.
+
+zo - open folded lines.
+
+zc - close folded lines.
+
+Ctrl+w,w - change window.
+
+:only | wq - quit other windows, write and quit.
