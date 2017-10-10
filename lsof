@@ -35,6 +35,9 @@ lsof -i
 # 查看本地 TCP 端口占用
 lsof -i TCP:<port>
 
+# -i tcp:993 lists only TCP connections involving port 993 (my app deals with IMAP connections). -n -P tells lsof not to attempt to resolve domain names or port numbers.
+lsof -i tcp:993 -nP
+
 # List all connections to a specific host
 lsof -i@192.168.1.5
 
