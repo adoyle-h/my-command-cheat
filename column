@@ -1,0 +1,4 @@
+# example
+(printf "PERM LINKS OWNER GROUP SIZE MONTH DAY " ; \
+ printf "HH:MM/YEAR NAME\n" ; \
+ ls -l | sed 1d) | column -t
