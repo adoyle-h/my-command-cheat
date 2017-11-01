@@ -1,0 +1,2 @@
+# 计算文件 CRC 校验和
+cksum "$filepath" | cut -d ' ' -f 1
