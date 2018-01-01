@@ -22,6 +22,16 @@ git clone https://github.com/adoyle-h/my-command-cheat.git ~/.cheat
 
 使用 `cheat -e <command>` 来编辑 `.cheat` 文件。
 
+## 版权声明 (Copyright and License)
+
+Copyright (c) 2017-2018 ADoyle. The project is licensed under the **BSD 3-clause License**.
+
+See the [LICENSE][] file for the specific language governing permissions and limitations under the License.
+
+
+<!-- links -->
+
+[LICENSE]: ./LICENSE
 
 [0]: http://adoyle.me/blog/my-basic-linux-commands-cheatsheet.html
 [1]: https://github.com/chrisallenlane/cheat
