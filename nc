@@ -13,6 +13,12 @@ nc -l <port> > output
 # 建立 TCP 链接，然后你就可以发送数据了
 nc <host> <port>
 
+# 传输文件
+## 发送
+nc -l <port> < <file>
+## 接收
+nc <ip> <port> > <file>
+
 # To open a TCP connection to port 42 of host.example.com, using port 31337 as the source port, with a timeout of 5 seconds:
 nc -p 31337 -w 5 host.example.com 42
 
