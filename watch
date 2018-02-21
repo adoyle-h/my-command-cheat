@@ -1,0 +1,5 @@
+# 每隔 2s 重复执行命令 date
+watch -n 2 date
+
+# 因为 watch 是全屏输出的，也可以用 while 语句实现
+while sleep 2; do date; done
