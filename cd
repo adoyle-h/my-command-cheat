@@ -8,29 +8,3 @@
 ..3='cd ../../..'
 ..4='cd ../../../..'
 ..5='cd ../../../../..'
-
-## use https://github.com/spencertipping/cd
-
-cd machine-name:[path]    # automounts machine-name:path with sshfs
-cd /dev/sdb1              # create a mountpoint, then sudo-mount it
-cd **x                    # cd's to the first descendant dir matching /x/
-cd ..5                    # cd's up five directories
-cd ..foo                  # cd's up to the nearest dir matching /foo/
-cd x.tar                  # mounts x.tar with archivemount
-cd hdfs://namenode:9000   # mounts namenode with hadoop-fuse-dfs
-cd ^                      # history: go back one directory
-cd ^^                     # history: go back two directories
-cd ^10                    # history: go back ten directories
-cd -10                    # history: go back ten directories
-cd ^foo                   # history: go back to last dir matching /foo/
-cd git:/path/to/repo      # mounts git commits as directories
-cd nfs:machine:/woot      # mounts NFS directories
-cd enc:/path/to/encrypted # mounts an encfs directory
-cd loop:image.iso         # mounts a loopback image
-cd au:/usr:/var           # AUFS union mount
-
-cd --history              # prints $PWD history, most recent first
-cd --mounts               # lists probably-active FUSE mount points
-cd --patterns             # all patterns that 'cd' is looking for
-cd --clean                # attempts to unmount and remove all mounts
-cd --which enc:x          # indicates which delegate is used for enc:x
