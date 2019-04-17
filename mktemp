@@ -1,0 +1,11 @@
+# 创建临时文件
+mktemp
+
+# 以前缀创建临时文件
+mktemp -t 'prefix'
+
+# 以后缀创建临时文件 (Mac 无效，需要用 gmktemp)
+gmktemp --suffix 'suffix'
+
+# 创建临时目录而非文件
+mktemp -d
