@@ -1,0 +1,17 @@
+# 清屏
+tput clear
+
+# 保存当前光标位置
+tput sc
+
+# 将光标移动到 row col
+tput cup 10 13
+
+# 隐藏光标
+tput civis
+
+# 显示光标
+tput cnorm
+
+# 显示输出
+tput rc
