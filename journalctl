@@ -1,0 +1,76 @@
+# 查看所有日志（默认情况下，只保存本次启动的日志）
+journalctl
+
+# 跟随显示 (like `tail -f`):
+journalctl -f
+
+# 显示最近的 N 条
+journalctl -n 20
+
+# 查看这次重启后的所有日志
+journalctl -b
+
+# 查看上次重启后的所有日志。
+journalctl -b -1
+
+# 查看 journalctl 的重启记录
+journalctl --list-boots
+
+# 根据级别过滤，级别取值跟 syslog 一致。可以用数字或者字符串
+# 0: emerg 1: alert 2: crit 3: err 4: warning 5: notice 6: info 7: debug
+journalctl -p err
+journalctl -p 3
+
+# 级别的取值有些不起作用，得根据实际情况查询，查询可用级别
+journalctl -F PRIORITY
+
+# 默认的条件组合是逻辑与，用 `+` 表示逻辑或。
+journalctl _SYSTEMD_UNIT=cron.service + _PID=28097
+
+# 查看 journalctl 支持的过滤字段
+man systemd.journal-fields
+
+# 根据时间过滤。时间取值可以是绝对时间，也可以是相对时间。
+# 例如 "YYYY-MM-DD", "YYYY-MM-DD HH:MM", "YYYY-MM-DD HH:MM:SS"
+journalctl --since=2012-10-15 --until="2011-10-16 23:59:59"
+# 例如 "yesterday", "today", "tomorrow", "now", "20 min ago", "-20 min"
+journalctl --since "20 min ago"
+
+# 查看所有的 systemd unit
+journalctl -F _SYSTEMD_UNIT
+
+# 按 unit 过滤
+journalctl -u $unit_name
+
+# 按 PID 过滤。例如 pid=8000
+journalctl _PID=8000
+# 按 UID 过滤。例如 uid=1000
+journalctl _UID=1000
+# 按 GID 过滤。例如 gid=20
+journalctl _GID=20
+
+# 按命令过滤。例如 sshd
+journalctl _COMM=sshd
+
+# 按可执行文件路径过滤
+journalctl /usr/bin/dbus-daemon
+
+# 输出日志不使用 pager，便于用 vim 来过滤
+journalctl --no-pager | vim -
+
+# 指定输出格式。-o 支持 json, json-pretty, short, verbose 等
+journalctl -o json
+
+# 查看内核日志（不显示应用日志）
+journalctl -k
+
+# 查看 journalctl 日志的磁盘占用量
+journalctl --disk-usage
+
+
+# 查看 journalctl 配置
+# /etc/systemd/journald.conf
+# /etc/systemd/journald.conf.d/*.conf
+# /run/systemd/journald.conf.d/*.conf
+# /usr/lib/systemd/journald.conf.d/*.conf
+man journald.conf

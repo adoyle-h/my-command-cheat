@@ -1,0 +1,14 @@
+# 查看手册
+man chronyc
+
+# 查看 NTP 服务器的在线和离线状态
+chronyc activity
+
+# 查看时间同步源
+chronyc sources -v
+
+# 查看时间同步源状态
+chronyc sourcestats -v
+
+# 显示 NTP 服务器的时间信息
+chronyc tracking
