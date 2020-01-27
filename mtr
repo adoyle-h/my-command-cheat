@@ -1,11 +1,5 @@
 ## mtr
-实时路由跟踪 + ping 工具
-
-# 默认是 live 模式
-mtr <域名或 IP>
-
-# 使用 report 模式
-mtr -r <域名或 IP>
+# 实时路由跟踪 + ping 工具
 
 ## 格式
 # HOST: vm-199 Loss% Snt Last Avg Best Wrst StDev
@@ -17,3 +11,17 @@ mtr -r <域名或 IP>
 # 第六列 Best：最好或者说时延最短的时间。
 # 第七列 Wrst：最坏或者说时延最长的时间。
 # 第八列 StDev：标准偏差。
+
+# 默认发送 ICMP 包
+# 默认是 live 模式
+mtr $hostname_or_ip
+
+# 使用 report 模式
+mtr -r $hostname_or_ip
+
+# 检测 TCP 包
+mtr -r --tcp -P $port $hostname_or_ip
+# 检测 UDP 包
+mtr -r --udp -P $port $hostname_or_ip
+# 检测 SCTP 包
+mtr -r --sctp -P $port $hostname_or_ip

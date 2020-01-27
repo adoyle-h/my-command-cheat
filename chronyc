@@ -1,14 +1,42 @@
 # 查看手册
 man chronyc
 
-# 查看 NTP 服务器的在线和离线状态
+# 参考文档 https://docs.fedoraproject.org/en-US/Fedora/18/html/System_Administrators_Guide/sect-Checking_if_chrony_is_synchronized.html
+
+# 查看 NTP Server 的在线和离线状态
 chronyc activity
 
-# 查看时间同步源
+# 查看 NTP Server 的状态
 chronyc sources -v
 
-# 查看时间同步源状态
+# 查看 NTP sync 状态
 chronyc sourcestats -v
 
-# 显示 NTP 服务器的时间信息
+# 显示 NTP Server 的详细信息
+# Reference ID    : xxxxxx (hostname)
+# | NTP 服务主机信息
+# Stratum         : 12
+# | 本机距离 NTP 主机有多少跳
+# Ref time (UTC)  : Sun Jan 19 06:53:55 2020
+# | 最近一次同步的时间
+# System time     : 0.000003937 seconds fast of NTP time
+# | 当前本机与 NTP 服务的系统时间差。因为 Chronyd 不直接修改系统时间，而是通过加快/减慢系统时间的速度来校正。
+# Last offset     : +0.000005532 seconds
+# | 上次时钟更新时估计的本地偏移量
+# RMS offset      : 0.000004344 seconds
+# | 偏移量的长期平均值
+# Frequency       : 1.740 ppm fast
+# | ppm 是百万分之百。 “频率”是指如果 chronyd 不校正系统时钟，系统时钟偏差的频率。例如，1ppm 意味着当系统时钟认为它已经前进了 1 秒，实际上前进了 1.000001 秒。100 ppm fast 则代表每天大约增加 8 秒偏差。
+# Residual freq   : +0.000 ppm
+# | 剩余频率。计算新频率的加权平均值，权重取决于这些精度。
+# Skew            : 0.014 ppm
+# | 频率的估计误差界限
+# Root delay      : 0.000394017 seconds
+# | 这是到 Stratum-1 主机的网络路径延迟的总和，计算机最终从 Stratum-1 主机同步。
+# Root dispersion : 0.011173039 seconds
+# | 通过所有主机返回到最终同步主机的 Stratum-1 主机所累积的总色散。色散是由系统时钟分辨率、统计测量变化等因素引起的。给出了计算机时钟精度的一个绝对界限(假设 Stratum-1 主机是正确的)
+# Update interval : 65.1 seconds
+# | 最后两次时钟更新之间的间隔。
+# Leap status     : Normal
+# | 跳转状态，取值有： Normal, Insert second, Delete second, Not synchronised.
 chronyc tracking

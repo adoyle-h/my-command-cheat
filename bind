@@ -1,0 +1,55 @@
+# 列出所有 readline 可用的函数
+bind -l
+
+# 列出所有 readline 函数以及绑定的快捷键
+bind -p
+# 易读地列出所有 readline 函数以及绑定的快捷键
+bind -P
+
+# 列出所有绑定宏（包括插入文本）的快捷键
+bind -s
+# 易读地列出所有绑定宏（包括插入文本）的快捷键
+bind -S
+
+# 列出所有绑定 shell 函数的快捷键
+bind -X
+
+# 列出 readline 的变量和值
+bind -v
+
+## 绑定快捷键
+# Use keymap as the keymap to be affected by the subsequent bindings.
+# Acceptable keymap names are emacs, emacs-stan-dard, emacs-meta, emacs-ctlx,
+# vi, vi-move, vi-command and vi-insert.
+# vi is equivalent to vi-command (vi-move is also a synonym);
+# emacs is equivalent to emacs-stan-dard.
+#
+# 快捷键
+# \C-x 表示 CTRL-x
+# \M-x 表示 ALT-x。准确的说是 Meta (Escape) key prefix
+# \eX 表示 escape character，X 填某个具体的 escape character
+# \\ 表示 \，\" 表示 "，\' 表示 '
+# DEL, ESC, ESCAPE, LFD, NEWLINE, RET, RETURN, RUBOUT, SPACE, SPC, and TAB
+# 参考 http://www.softpanorama.org/Scripting/Shellorama/Bash_as_command_interpreter/inputrc.shtml
+
+# 绑定到 readline 的函数
+# 注意 : 左右可以带空格，比如 $keyseq: $function_name。
+# 但 function_name 左右不能有引号。如果有，会被当做插入字符串
+bind [-m $keymap] $keyseq:$function_name
+# man 手册里写的，但我不知道 readline_command 是什么
+bind [-m $keymap] $keyseq:$readline_command
+# 绑定到 shell 函数
+bind [-m $keymap] -x $keyseq:$shell_command
+
+# 删除绑定的快捷键
+bind -r $keyseq
+
+## 例子
+# CTRL-O 会触发在 shell 光标处插入文本 > output
+bind '"\C-o": "> output"'
+
+# 绑定组合键 CTRL-X CTRL-R
+bind '"\C-x\C-r": re-read-init-file'
+
+# 绑定组合键 CTRL-ALT-X （\C-\M- 有效，\M-\C- 无效）
+bind '"\C-\M-x": re-read-init-file'

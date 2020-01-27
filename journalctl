@@ -4,6 +4,9 @@ journalctl
 # 跟随显示 (like `tail -f`):
 journalctl -f
 
+# 显示完整日志（默认过长的日志会省略）
+journalctl -l
+
 # 显示最近的 N 条
 journalctl -n 20
 
