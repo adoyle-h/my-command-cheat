@@ -1,6 +1,9 @@
 # Download a single file
 curl http://path.to.the/file
 
+# 请求 HTTPS
+curl -k https://path.to.the/file
+
 # -o 指定保存文件名字
 curl http://example.com/file.zip -o new_file.zip
 
