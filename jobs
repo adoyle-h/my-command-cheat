@@ -1,0 +1,5 @@
+# List background jobs
+jobs
+
+# Terminate a background job:
+kill %job_id
