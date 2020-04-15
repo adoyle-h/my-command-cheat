@@ -27,3 +27,6 @@ diff -Naur <file-1> <file-2> > $patch_file
 
 # use git diff to generate patch file
 git diff $commit_old $commit_new > $patch_file
+
+# generate git patch file (included commit info)
+git format-patch -o patch origin/develop..develop

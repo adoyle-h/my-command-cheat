@@ -24,3 +24,9 @@ sed '/happily ever after/a\The end.'
 
 # 提取匹配到的字符串
 echo '[123]' | sed -E 's/\[(.*)\]/\1/'
+
+# 使用其他分隔符
+echo '/a/b' | sed -E 's|/a/b|/a/c|'
+
+# 删除匹配行以及它的下一行
+sed -i '/pattern/,+1d' <file>

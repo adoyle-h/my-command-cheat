@@ -28,6 +28,9 @@ curl -I http://example.com
 # -f 返回错误码，不返回 http response 的内容，-s 阻止 curl 自身的输出
 curl -Ifs http://example.com
 
+# 使用 cookie, -b 或者 --cookie
+curl -b 'KEY=VALUE' http://example.com
+
 # Download all sequentially numbered files (1-24)
 curl http://example.com/pic[1-24].jpg
 
