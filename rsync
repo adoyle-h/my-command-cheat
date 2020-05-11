@@ -1,7 +1,11 @@
 # To copy files from remote to local, maintaining file properties and sym-links
-# (-a), zipping for faster transfer (-z), verbose (-v):
-rsync -avz host:file1 :file1 /dest/
-rsync -avz /source host:/dest
+# archive mode (-a), compressed (-z), verbose (-v), human-readable numbers (-h), partial and progress (-P):
+rsync -avzhP host:file1 :file1 /dest/
+rsync -avzhP /source host:/dest
+
+# -u, --update                skip files that are newer on the receiver
+#     --inplace               update destination files in-place
+#     --append                append data onto shorter files
 
 # To copy files using checksum (-c) rather than time to detect if the file has
 # changed. (Useful for validating backups):
@@ -16,7 +20,10 @@ rsync -auv <src> <dest>
 
 # To copy file from local to remote over ssh with non standard port 1234 to
 # destination folder in remoteuser's home directory:
-rsync -avz -e "ssh -p1234" <source> <username>@<host>:<dest>
+rsync -avzhP -e "ssh -p1234" <source> <username>@<host>:<dest>
 
 # show progress
 rsync -rvP <src> <dest>
+
+# 排除 .git 目录，xxx 文件
+rsync --exclude .git --exclude xxx <src> <dest>
