@@ -19,3 +19,9 @@ ps -r
 # Exclude grep from your grepped output of ps.
 # Add [] to the first letter. Ex: sshd -> [s]shd
 ps aux | grep '[h]ttpd'
+
+# 查看进程组 ID
+ps -O pgid
+
+# 查看指定进程
+ps -p pid[,pid...]
