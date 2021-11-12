@@ -7,6 +7,15 @@
 # -u 默认是 TCP，加这个参数使用 UDP
 nc -vz <host> <port>
 
+# 扫描端口 1~65535
+nc -vz <host> 1-65535 | grep succeeded
+
+# 尝试发出 QUIT 来嗅探监听此端口的服务信息
+echo QUIT | nc host.example.com 20-30
+# SSH-1.99-OpenSSH_3.6.1p2
+# Protocol mismatch.
+# 220 host.example.com IMS SMTP Receiver Version 0.84 Ready
+
 # 简易服务器，监听端口，并将结果输出到文件
 nc -l <port> > output
 
