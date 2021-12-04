@@ -1,0 +1,20 @@
+---
+tags: [ packaging ]
+---
+# To install or upgrade a package:
+dpkg -i <deb-file>
+
+# To remove a package (including configuration files):
+dpkg -P <deb-file>
+
+# To list all installed packages with versions and details:
+dpkg -l
+
+# 查看已安装包里的文件路径
+dpkg -L <pkg>
+
+# 查看指定 deb 包里的文件路径
+dpkg -c <.deb>
+
+# To determine whether a Debian package is installed:
+dpkg -s <deb-file> | grep Status
