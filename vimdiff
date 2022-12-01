@@ -32,3 +32,4 @@ git mergetool
 # 将目前窗口中的所有文件退出 diff 模式
 :diffoff!
 
+# vim: set ft=sh

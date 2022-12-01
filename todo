@@ -102,3 +102,4 @@ t addto DEST "TEXT TO ADD"
 # in the configuration directory.  When SRC is not defined it's by default todo.txt.
 t move NUMBER DEST [SRC]
 t mv NUMBER DEST [SRC]
+# vim: set ft=sh

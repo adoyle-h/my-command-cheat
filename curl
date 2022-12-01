@@ -48,3 +48,4 @@ curl ftp://username:password@example.com
 
 # Limit the rate of a download
 curl --limit-rate 1000B -O http://path.to.the/file
+# vim: set ft=sh

@@ -6,3 +6,4 @@ pstree 15495
 
 # Show process number ``15495'' and its parents and descendants:
 pstree -p 15495
+# vim: set ft=sh

@@ -77,3 +77,4 @@ journalctl --disk-usage
 # /run/systemd/journald.conf.d/*.conf
 # /usr/lib/systemd/journald.conf.d/*.conf
 man journald.conf
+# vim: set ft=sh

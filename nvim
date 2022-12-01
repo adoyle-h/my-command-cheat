@@ -1,2 +1,13 @@
+# open files with split horizontally.
+nvim -o <file1> <file2>
+
+# open files with split vertically.
+nvim -O <file1> <file2>
+
+# open files with tab pages.
+nvim -p <file1> <file2>
+
 # 保持当前环境变量和 HOME 目录。保证 nvim 能找到配置
 sudo -HE nvim <file>
+
+# vim: set ft=sh

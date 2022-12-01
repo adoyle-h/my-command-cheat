@@ -1,2 +1,3 @@
 # 设置镜像站点
 NVM_NODEJS_ORG_MIRROR="https://nodejs.org/dist"
+# vim: set ft=sh

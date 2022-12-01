@@ -2,3 +2,4 @@
 
 # 以 : 替换为换行符打印
 echo -e ${PATH//:/\\n}
+# vim: set ft=sh

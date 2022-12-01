@@ -20,3 +20,4 @@ command &>file
 
 # 将标准错误输出丢弃
 command 2>/dev/null
+# vim: set ft=sh

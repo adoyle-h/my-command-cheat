@@ -28,3 +28,4 @@ strace -p <pid>
 
 # -ff 配合 -o filename，则所有进程的跟踪结果输出到相应的 filename.<pid> 中
 strace -ff -f -o log -p <pid>
+# vim: set ft=sh

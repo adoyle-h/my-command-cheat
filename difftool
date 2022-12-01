@@ -15,3 +15,4 @@ zc - close folded lines.
 Ctrl+w,w - change window.
 
 :only | wq - quit other windows, write and quit.
+# vim: set ft=sh

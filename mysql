@@ -34,3 +34,4 @@ DELETE FROM tbl_name WHERE user = 'jcole';
 show character set;
 show char set;
 
+# vim: set ft=sh

@@ -5,3 +5,4 @@
 
 # 连接多个管道
 command1 | command2 paramater1 | command3 parameter1 | command4
+# vim: set ft=sh

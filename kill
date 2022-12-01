@@ -9,3 +9,4 @@ kill -15 <pid>
 
 # To kill a process forcefully:
 kill -9 <pid>
+# vim: set ft=sh

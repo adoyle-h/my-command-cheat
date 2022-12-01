@@ -25,3 +25,4 @@ mtr -r --tcp -P $port $hostname_or_ip
 mtr -r --udp -P $port $hostname_or_ip
 # 检测 SCTP 包
 mtr -r --sctp -P $port $hostname_or_ip
+# vim: set ft=sh

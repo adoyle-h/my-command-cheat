@@ -5,3 +5,4 @@ getconf ARG_MAX
 
 # 查看系统位长是32位/64位
 getconf LONG_BIT
+# vim: set ft=sh

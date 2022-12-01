@@ -3,3 +3,4 @@
 
 # 查看文件（真实）完整路径。(软链接会输出真实路径)
 realpth <file>
+# vim: set ft=sh

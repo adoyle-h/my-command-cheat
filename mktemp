@@ -9,3 +9,4 @@ gmktemp --suffix 'suffix'
 
 # 创建临时目录而非文件
 mktemp -d
+# vim: set ft=sh

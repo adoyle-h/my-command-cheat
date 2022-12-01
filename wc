@@ -8,3 +8,4 @@ wc -m <file>
 
 # 计算单词个数
 wc -w <file>
+# vim: set ft=sh

@@ -4,3 +4,4 @@
 # It's just a joke command, and not useful at all.
 # https://github.com/mtoyoda/sl
 sl
+# vim: set ft=sh

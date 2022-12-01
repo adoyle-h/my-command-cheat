@@ -18,3 +18,4 @@ dpkg -c <.deb>
 
 # To determine whether a Debian package is installed:
 dpkg -s <deb-file> | grep Status
+# vim: set ft=sh

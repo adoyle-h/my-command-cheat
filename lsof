@@ -52,3 +52,4 @@ lsof -p <pid>
 
 # List all processes accessing a particular file/directory
 lsof </path/to/file>
+# vim: set ft=sh

@@ -14,3 +14,4 @@ ag -u
 
 # 搜索包括 ignore 掉的文件，但仍忽略隐藏文件
 ag -U
+# vim: set ft=sh

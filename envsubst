@@ -8,3 +8,4 @@
 envsubst <<<'hello $USER'
 
 echo 'hello $USER' | envsubst
+# vim: set ft=sh

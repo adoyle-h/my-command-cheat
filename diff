@@ -30,3 +30,4 @@ git diff $commit_old $commit_new > $patch_file
 
 # generate git patch file (included commit info)
 git format-patch -o patch origin/develop..develop
+# vim: set ft=sh

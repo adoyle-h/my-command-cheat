@@ -6,3 +6,4 @@ nl <file>
 
 # 给所有行插入行号
 nl -b a <file>
+# vim: set ft=sh

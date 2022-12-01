@@ -53,3 +53,4 @@ bind '"\C-x\C-r": re-read-init-file'
 
 # 绑定组合键 CTRL-ALT-X （\C-\M- 有效，\M-\C- 无效）
 bind '"\C-\M-x": re-read-init-file'
+# vim: set ft=sh

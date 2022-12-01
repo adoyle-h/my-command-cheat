@@ -9,3 +9,4 @@ rustup default <version>
 
 # 设置某项目使用的 Rust 版本(随时可以切换)
 rustup override <version>
+# vim: set ft=sh

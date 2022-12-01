@@ -40,3 +40,4 @@ chronyc sourcestats -v
 # Leap status     : Normal
 # | 跳转状态，取值有： Normal, Insert second, Delete second, Not synchronised.
 chronyc tracking
+# vim: set ft=sh

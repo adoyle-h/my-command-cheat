@@ -1,2 +1,3 @@
 # backup homebrew
 brew bundle dump --force
+# vim: set ft=sh
